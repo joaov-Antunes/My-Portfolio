@@ -164,11 +164,9 @@ body {
 .linkedinBtn {
     height: 52px;
     width: 252px;
-    position: absolute;
-    right: 332px;
-    top: 26px;
+    margin-right: 332px;
+    margin-top: 26px;
     background: #FA6900;
-    cursor: pointer;
     border: 1px solid #000;
     color: #000;
     font-size: 16px;
@@ -181,6 +179,7 @@ body {
     border: 1px solid #fff;
     box-shadow: inset 252px 0 0 0 #000;
     color: #fff;
+    cursor: pointer;
 }
 
 .right-title {
@@ -375,7 +374,7 @@ input {
     text-align: center;
 }
 
-@media (max-width: 1920px) and (min-width: 1440px) {
+@media (max-width: 1920px) and (min-width: 1800px) {
     @keyframes left-entry{
         from {
             filter: opacity(0% );
