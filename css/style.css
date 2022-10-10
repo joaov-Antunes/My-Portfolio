@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 32px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top-container {
+    display: flex;
+    width: 100vw;
+    background: #FA6900;
+}
+
+@keyframes top-left {
+    from {
+        margin-left: -1000px;
+        transform: rotate(-30deg);
+    }
+
+    to {
+        margin-left: 0px;
+    }
+}
+
+@keyframes left-entry{
+    from {
+        filter: opacity(0%  );
+        left: -1000px;
+    }
+
+    to {
+        filter: opacity(100%);
+        left: 76px;
+    }
+}
+
+@keyframes right-entry{
+    from {
+        right: -1000px;
+    }
+
+    to {
+        right: 332px;
+    }
+}
+
+.top-left {
+    background: #000;
+    width: 100%;
+    clip-path: polygon(0 0, 70% 0, 53% 100%, 0% 100%);
+    font-size: 30px;
+    animation: top-left 1s;
+}
+
+.top-left-content {
+    position: absolute;
+    left: 76px;
+    animation: left-entry 1s;
+}
+
+.top-right {
+    background: #FA6900;
+    height: 100vh;
+    width: 70%;
+}
+
+.contact {
+    cursor: pointer;
+    height: 52px;
+    width: 252px;
+    margin-left: 76px;
+    margin-top: 26px;
+    background: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;  
+    animation: left-entry 1s;
+    transition: .7s;
+}
+
+.contact:hover {
+    box-shadow: inset 252px 0 0 0 #fff;
+    color: #000;
+}
+
+.title {
+    color: #fff;
+    font-size: 32px;
+    margin-top: 260px;
+    font-family: 'Playfair Display', sans-serif;
+    animation: left-entry .7s;
+}
+
+.title::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 0;
+    animation: blink 1s;
+    animation-iteration-count: 3.5;
+}
+
+.name {
+    margin-bottom: 18px;
+    color: #fa6800;
+    font-size: 48px;
+    font-family: 'Playfair Display', sans-serif;
+    animation: left-entry .7s;
+}
+
+.name::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.about-me {
+    width: 135px;
+    height: 35px;
+    border: 1px solid #fff;
+    background: #000;
+    cursor: pointer;
+    font-size: 14px;
+    animation: left-entry .7s;
+    transition: .7s;
+    color: #fff;
+}
+
+.about-me:hover {
+    box-shadow: inset 135px 0 0 0 #fff;
+    color: #000;
+}
+
+.right-content {
+    position: absolute;
+    right: 332px;
+    animation: right-entry 1s;
+}
+
+.linkedinBtn {
+    height: 52px;
+    width: 252px;
+    position: absolute;
+    right: 332px;
+    top: 26px;
+    background: #FA6900;
+    cursor: pointer;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    animation: right-entry 1s;
+    transition: .7s;
+}
+
+.linkedinBtn:hover {
+    border: 1px solid #fff;
+    box-shadow: inset 252px 0 0 0 #000;
+    color: #fff;
+}
+
+.right-title {
+    font-size: 48px;
+    font-family: 'Playfair Display', sans-serif;
+    margin-top: 320px;
+}
+
+.gitBtn {
+    height: 52px;
+    width: 252px;
+    background: #FA6900;
+    border: 1px solid #000;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+    transition: .7s;
+}
+
+.gitBtn:hover {
+    box-shadow: inset 252px 0 0 0 #000;
+    border: 1px solid #fff;
+}
+
+.gitBtn:hover .git {
+    filter: invert(100%);
+}
+
+.git {
+    width: 32px;
+    margin: 0;
+    transition: .7s;
+}   
+
+.container {
+    background: #201D1D;
+    width: 100vw;
+    color: #fff;
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about {
+    width: 334px;
+    position: relative;
+    left: 76px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+p {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.line {
+    background: #FA6900;
+    height: 3px;
+    width: 72px;
+}
+
+.about-title {
+    font-size: 36px;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.linkedin {
+    height: 52px;
+    width: 252px;
+    background: #FA6900;
+    color: #000;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    border: none;
+    transition: .7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.linkedin:hover {
+    border: 1px solid #FA6900;
+    box-shadow: inset 252px 0 52px 0 #201D1D;
+    color: #fff;
+}
+
+.linkedin:hover .git{
+    filter: invert(100);
+}
+
+.tecnologies {
+    position: absolute;
+    right: 332px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.tech-title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 36px;
+}
+
+.image-row {
+    margin-left: -40px;
+}
+
+.icon {
+    margin-left: 40px;
+    width: 48px;
+}
+
+.bottom-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background: #FA6900;
+    height: 100vh;
+}
+
+.bottom-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 76px;
+}
+
+.bottom-right {
+    position: absolute;
+    right: 270px;
+}
+
+.bottom-title {
+    color: #000;
+    font: 36px 'Playfair Display', sans-serif;
+}
+
+.lets-talk {
+    color: #fff;
+    font: 24px 'Playfair Display', sans-serif;
+}
+
+.black-line {
+    background: #000;
+    height: 3px;
+    width: 78px;
+}
+
+.email {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.feedback {
+    color: #000;
+    font-size: 24px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: #FA6900;
+    margin-top: 180px;
+}
+
+.mockup {
+    width: 318px;
+    height: 384px;
+    margin-top: 16px;
+    margin-left: 6.4px;
+}
+
+.main-project {
+    color: #fff;
+    font: 32px 'Playfair Display', sans-serif;
+    text-align: center;
+}
+
+@media (max-width: 1920px) and (min-width: 1440px) {
+    @keyframes left-entry{
+        from {
+            filter: opacity(0% );
+            left: -1000px;
+        }
+    
+        to {
+            filter: opacity(100%);
+            left: 204px;
+        }
+    }
+
+    .contact {
+        margin-left: 204px;
+    }
+
+    .top-left-content {
+        left: 204px;
+    }
+
+    .contact, .linkedinBtn, .gitBtn {
+        font-size: 24px;
+        width: 334px;
+        height: 78px;
+    }
+
+    .contact:hover {
+        box-shadow: inset 334px 0 0 0 #fff;
+        color: #000;
+    }
+
+    .linkedinBtn:hover {
+        box-shadow: inset 334px 0 0 0 #000;
+    }
+
+    .gitBtn:hover {
+        box-shadow: inset 334px 0 0 0 #000;
+    }
+
+    .linkedinBtn {
+        top: 60px;
+    }
+
+    .contact {
+        margin-top: 60px;
+    }
+
+    .title {
+        font-size: 54px;
+        margin-top: 450px;
+    }
+
+    .right-title {
+        margin-top: 570px;
+        font-size: 64px;
+    }
+
+    .name {
+        font-size: 64px;
+    }
+
+    .about-me {
+        width: 170px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .about-me:hover {
+        box-shadow: inset 170px 0 0 0 #fff;
+        color: #000;
+    }
+
+    /*Middlle page*/
+
+    .about {
+        left: 204px;
+        width: 628px;
+        gap: 54px;
+    }
+
+    .line {
+        width: 105px;
+    }
+
+    .about-title {
+        font-size: 54px;
+    }
+
+    p {
+        font-size: 32px;
+    }
+
+    .linkedin {
+        width: 334px;
+        height: 78px;
+        font-size: 32px;
+    }
+    
+    .linkedin:hover {
+        box-shadow: inset 334px 0 78px 0 #000;
+    }
+
+    .tech-title {
+        font-size: 54px;
+    }
+
+    .image-row {
+        margin-left: -64px;
+    }
+
+    .icon {
+        margin-left: 62px;
+        width: 64px;
+        height: 64px;
+    }
+
+    .bottom-left {
+        margin-left: 204px;
+    }
+
+    .bottom-right {
+        right: 150px;
+    }
+
+    .mockup {
+        width: 450px;
+        height: 528px;
+    }
+
+    .main-project {
+        font-size: 54px;
+    }
+
+    .bottom-left {
+        gap: 24px;
+    }
+
+    .bottom-title {
+        font-size: 54px;
+    }
+
+    .lets-talk {
+        font-size: 32px;
+    }
+
+    .black-line {
+        width: 105px;
+    }
+
+    .email {
+        font-size: 22px;
+    }
+
+    .feedback {
+        font-size: 32px;
+    }
+}
