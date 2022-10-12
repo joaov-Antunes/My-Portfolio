@@ -533,3 +533,20 @@ input {
         font-size: 32px;
     }
 }
+
+@media (max-width: 390px) and (min-width: 340px)  {
+    .top-container {
+        flex-direction: column;
+    }
+    
+    
+
+    .top-left {
+        height: 100vh;
+    }
+
+    .top-right {
+        height: 100vh;
+    }
+}
+
